@@ -1,0 +1,45 @@
+{
+  "name": "signupshield",
+  "version": "1.4.0",
+  "description": "Official JavaScript/TypeScript SDK for SignupShield — stop fake signups with one API call",
+  "keywords": ["signupshield", "email-validation", "fraud-prevention", "signup-protection"],
+  "homepage": "https://signupshield.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signupshield/signupshield.git",
+    "directory": "packages/sdk-js"
+  },
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "test": "echo 'No tests yet' && exit 0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "eslint": "^9.39.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
