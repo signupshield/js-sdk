@@ -1,9 +1,5 @@
-export { SignupShield } from "./client.js"
-export {
-  SignupShieldError,
-  SignupShieldRateLimitError,
-  SignupShieldTimeoutError,
-} from "./errors.js"
+export { SignupShield } from './client.js'
+export { SignupShieldError, SignupShieldRateLimitError, SignupShieldTimeoutError } from './errors.js'
 export type {
   BatchParams,
   BatchResult,
@@ -11,4 +7,4 @@ export type {
   ScoreResult,
   SignupShieldErrorBody,
   SignupShieldOptions,
-} from "./types.js"
+} from './types.js'
